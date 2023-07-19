@@ -1,0 +1,377 @@
+[{
+    "site": "네이버 뉴스",
+    "urlPattern": [
+      "news.naver.com.*opinion.*themeColumns"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "listSelector": "ul.themecolumns_list > li",
+      "linkSelector": "strong.themecolumns_headline > a.themecolumns_title",
+      "linkAttr": "href",
+      "datetimeSelector": "em.writercolumns_date",
+      "paginationSelector": "div.paging",
+      "paginationTag": "strong",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+      "documentSelector": "table.container div#main_content",
+      "documentNoResultSelector": "div.error_msg",
+      "titleSelector": "div.article_header h3#articleTitle",
+      "contentSelector": "div#articleBody div#articleBodyContents",
+      "datetimeSelector": "div.sponsor span.t11",
+      "commentCountSelector" : "div.u_cbox_head span.u_cbox_count",
+      "usefulCountSelector": "div.end_btn li.u_likeit_list.useful span.u_likeit_list_count._count",
+      "wowCountSelector":"div.end_btn li.u_likeit_list.wow span.u_likeit_list_count._count",
+      "touchedCountSelector":"div.end_btn li.u_likeit_list.touched span.u_likeit_list_count._count",
+      "analyticalCountSelector":"div.end_btn li.u_likeit_list.analytical span.u_likeit_list_count._count",
+      "moreCountSelector":"div.end_btn li.u_likeit_list.recommend span.u_likeit_list_count._count",
+      "recommendCountSelector":"div#toMainContainer em.u_cnt._count",
+      "removeSelector": "div#articleBody div#articleBodyContents a"
+    },
+    "commentSelectors": {
+      "openCommentPatternRegex": "news.naver.com.*oid=(\\d.*)\\&aid=(\\d.*)",
+      "openCommentPattern": "http://news.naver.com/main/read.nhn?mode=LS2D&mid=shm&sid1=100&sid2=265&oid=018&aid=0004028184",
+      "urlPattern": "https://apis.naver.com/commentBox/cbox5/web_naver_list_jsonp.json?ticket=news&templateId=default_life&_callback=window.__cbox_jindo_callback._2152&lang=ko&country=KR&objectId=news#1#,#2#&categoryId&pageSize=10000&indexSize=10&groupId&page=1&initialize=true&useAltSort=true&replyPageSize=100&moveTo&sort&userType="
+    }
+  },{
+    "site": "네이버 뉴스",
+    "urlPattern": [
+      "news.naver.com.*opinion.*writerColumns"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "listSelector": "ul.writercolumns_list > li",
+      "linkSelector": "strong.writercolumns_headline > a[href]",
+      "linkAttr": "href",
+      "datetimeSelector": "em.writercolumns_date",
+      "paginationSelector": "div.paging",
+      "paginationTag": "strong",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+      "documentSelector": "table.container div#main_content",
+      "documentNoResultSelector": "div.error_msg",
+      "titleSelector": "div.article_header h3#articleTitle",
+      "contentSelector": "div#articleBody div#articleBodyContents",
+      "datetimeSelector": "div.sponsor span.t11",
+      "commentCountSelector" : "div.u_cbox_head span.u_cbox_count",
+      "usefulCountSelector": "div.end_btn li.u_likeit_list.useful span.u_likeit_list_count._count",
+      "wowCountSelector":"div.end_btn li.u_likeit_list.wow span.u_likeit_list_count._count",
+      "touchedCountSelector":"div.end_btn li.u_likeit_list.touched span.u_likeit_list_count._count",
+      "analyticalCountSelector":"div.end_btn li.u_likeit_list.analytical span.u_likeit_list_count._count",
+      "moreCountSelector":"div.end_btn li.u_likeit_list.recommend span.u_likeit_list_count._count",
+      "recommendCountSelector":"div#toMainContainer em.u_cnt._count",
+      "removeSelector": "div#articleBody div#articleBodyContents a"
+    },
+    "commentSelectors": {
+      "openCommentPatternRegex": "news.naver.com.*oid=(\\d.*)\\&aid=(\\d.*)",
+      "openCommentPattern": "http://news.naver.com/main/read.nhn?mode=LS2D&mid=shm&sid1=100&sid2=265&oid=018&aid=0004028184",
+      "urlPattern": "https://apis.naver.com/commentBox/cbox5/web_naver_list_jsonp.json?ticket=news&templateId=default_life&_callback=window.__cbox_jindo_callback._2152&lang=ko&country=KR&objectId=news#1#,#2#&categoryId&pageSize=10000&indexSize=10&groupId&page=1&initialize=true&useAltSort=true&replyPageSize=100&moveTo&sort&userType="
+    }
+  },{
+    "site": "네이버 뉴스",
+    "urlPattern": [
+      "news.naver.com.*opinion.*todayColumn"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "dateFormat": "YYYYMMDD",
+      "startDtParam": "date",
+      "listSelector": "ul.todaycolumn_list > li",
+      "linkSelector": "strong.todaycolumn_headline > a[href]",
+      "linkAttr": "href",
+      "paginationSelector": "div.paging",
+      "paginationTag": "strong",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+      "documentSelector": "table.container div#main_content",
+      "documentNoResultSelector": "div.error_msg",
+      "titleSelector": "div.article_header h3#articleTitle",
+      "contentSelector": "div#articleBody div#articleBodyContents",
+      "datetimeSelector": "div.sponsor span.t11",
+      "commentCountSelector" : "div.u_cbox_head span.u_cbox_count",
+      "usefulCountSelector": "div.end_btn li.u_likeit_list.useful span.u_likeit_list_count._count",
+      "wowCountSelector":"div.end_btn li.u_likeit_list.wow span.u_likeit_list_count._count",
+      "touchedCountSelector":"div.end_btn li.u_likeit_list.touched span.u_likeit_list_count._count",
+      "analyticalCountSelector":"div.end_btn li.u_likeit_list.analytical span.u_likeit_list_count._count",
+      "moreCountSelector":"div.end_btn li.u_likeit_list.recommend span.u_likeit_list_count._count",
+      "recommendCountSelector":"div#toMainContainer em.u_cnt._count",
+      "removeSelector": "div#articleBody div#articleBodyContents a"
+    },
+    "commentSelectors": {
+      "openCommentPatternRegex": "news.naver.com.*oid=(\\d.*)\\&aid=(\\d.*)",
+      "openCommentPattern": "http://news.naver.com/main/read.nhn?mode=LS2D&mid=shm&sid1=100&sid2=265&oid=018&aid=0004028184",
+      "urlPattern": "https://apis.naver.com/commentBox/cbox5/web_naver_list_jsonp.json?ticket=news&templateId=default_life&_callback=window.__cbox_jindo_callback._2152&lang=ko&country=KR&objectId=news#1#,#2#&categoryId&pageSize=10000&indexSize=10&groupId&page=1&initialize=true&useAltSort=true&replyPageSize=100&moveTo&sort&userType="
+    }
+  },{
+    "site": "네이버 뉴스",
+    "urlPattern": [
+      "news.naver.com.*opinion.*todayEditorial"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "dateFormat": "YYYYMMDD",
+      "startDtParam": "date",
+      "listSelector": "div.todayeditorial li.todayeditorial_item",
+      "linkSelector": "a[href]",
+      "linkAttr": "href",
+      "paginationSelector": "div.paging",
+      "paginationTag": "strong",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+      "documentSelector": "table.container div#main_content",
+      "documentNoResultSelector": "div.error_msg",
+      "titleSelector": "div.article_header h3#articleTitle",
+      "contentSelector": "div#articleBody div#articleBodyContents",
+      "datetimeSelector": "div.sponsor span.t11",
+      "commentCountSelector" : "div.u_cbox_head span.u_cbox_count",
+      "usefulCountSelector": "div.end_btn li.u_likeit_list.useful span.u_likeit_list_count._count",
+      "wowCountSelector":"div.end_btn li.u_likeit_list.wow span.u_likeit_list_count._count",
+      "touchedCountSelector":"div.end_btn li.u_likeit_list.touched span.u_likeit_list_count._count",
+      "analyticalCountSelector":"div.end_btn li.u_likeit_list.analytical span.u_likeit_list_count._count",
+      "moreCountSelector":"div.end_btn li.u_likeit_list.recommend span.u_likeit_list_count._count",
+      "recommendCountSelector":"div#toMainContainer em.u_cnt._count",
+      "removeSelector": "div#articleBody div#articleBodyContents a"
+    },
+    "commentSelectors": {
+      "openCommentPatternRegex": "news.naver.com.*oid=(\\d.*)\\&aid=(\\d.*)",
+      "openCommentPattern": "http://news.naver.com/main/read.nhn?mode=LS2D&mid=shm&sid1=100&sid2=265&oid=018&aid=0004028184",
+      "urlPattern": "https://apis.naver.com/commentBox/cbox5/web_naver_list_jsonp.json?ticket=news&templateId=default_life&_callback=window.__cbox_jindo_callback._2152&lang=ko&country=KR&objectId=news#1#,#2#&categoryId&pageSize=10000&indexSize=10&groupId&page=1&initialize=true&useAltSort=true&replyPageSize=100&moveTo&sort&userType="
+    }
+  },
+  {
+    "site": "네이버 뉴스(정치)",
+    "urlPattern": [
+      "news.naver.com*sid1=100*"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "dateFormat": "YYYYMMDD",
+      "startDtParam": "date",
+      "listSelector": "div#main_content div.list_body.newsflash_body ul li",
+      "linkSelector": "dl > dt > a[href]",
+      "linkAttr": "href",
+      "datetimeSelector": "dl > dd > span.date",
+      "paginationSelector": "div.paging",
+      "paginationTag": "strong",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+      "documentSelector": "table.container div#main_content",
+      "documentNoResultSelector": "div.error_msg",
+      "titleSelector": "div.article_header h3#articleTitle",
+      "contentSelector": "div#articleBody div#articleBodyContents",
+      "datetimeSelector": "div.sponsor span.t11",
+      "commentCountSelector" : "div.u_cbox_head span.u_cbox_count",
+      "usefulCountSelector": "div.end_btn li.u_likeit_list.useful span.u_likeit_list_count._count",
+      "wowCountSelector":"div.end_btn li.u_likeit_list.wow span.u_likeit_list_count._count",
+      "touchedCountSelector":"div.end_btn li.u_likeit_list.touched span.u_likeit_list_count._count",
+      "analyticalCountSelector":"div.end_btn li.u_likeit_list.analytical span.u_likeit_list_count._count",
+      "moreCountSelector":"div.end_btn li.u_likeit_list.recommend span.u_likeit_list_count._count",
+      "recommendCountSelector":"div#toMainContainer em.u_cnt._count",
+      "mediaSelector": "div.article_header a > img",
+      "mediaAttr": "title",
+      "articleOriginSelector": "div.article_info div.sponsor a.btn_artialoriginal[href]",
+      "articleAttr": "href",
+      "commentUrlSelector": "div.simplecmt_links a[href]:nth-child(1)",
+      "removeSelector": "div#articleBody div#articleBodyContents a"
+    },
+    "commentSelectors": {
+      "openCommentPatternRegex": "news.naver.com.*oid=(\\d.*)\\&aid=(\\d.*)",
+      "openCommentPattern": "http://news.naver.com/main/read.nhn?mode=LS2D&mid=shm&sid1=100&sid2=265&oid=018&aid=0004028184",
+      "urlPattern": "https://apis.naver.com/commentBox/cbox5/web_naver_list_jsonp.json?ticket=news&templateId=default_life&_callback=window.__cbox_jindo_callback._2152&lang=ko&country=KR&objectId=news#1#,#2#&categoryId&pageSize=10000&indexSize=10&groupId&page=1&initialize=true&useAltSort=true&replyPageSize=100&moveTo&sort&userType="
+    }
+  },
+  {
+    "site": "네이버 뉴스",
+    "urlPattern": [
+      "news.naver.com"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "dateFormat": "YYYYMMDD",
+      "startDtParam": "date",
+      "listSelector": "div#main_content div.list_body.newsflash_body ul li",
+      "linkSelector": "dl > dt > a[href]",
+      "linkAttr": "href",
+      "datetimeSelector": "dl > dd > span.date",
+      "paginationSelector": "div.paging",
+      "paginationTag": "strong",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+      "documentSelector": "table.container div#main_content",
+      "documentNoResultSelector": "div.error_msg",
+      "titleSelector": "div.article_header h3#articleTitle",
+      "contentSelector": "div#articleBody div#articleBodyContents",
+      "datetimeSelector": "div.sponsor span.t11",
+      "commentCountSelector" : "div.u_cbox_head span.u_cbox_count",
+      "usefulCountSelector": "div.end_btn li.u_likeit_list.useful span.u_likeit_list_count._count",
+      "wowCountSelector":"div.end_btn li.u_likeit_list.wow span.u_likeit_list_count._count",
+      "touchedCountSelector":"div.end_btn li.u_likeit_list.touched span.u_likeit_list_count._count",
+      "analyticalCountSelector":"div.end_btn li.u_likeit_list.analytical span.u_likeit_list_count._count",
+      "moreCountSelector":"div.end_btn li.u_likeit_list.recommend span.u_likeit_list_count._count",
+      "recommendCountSelector":"div#toMainContainer em.u_cnt._count",
+      "mediaSelector": "div.article_header a > img",
+      "mediaAttr": "title",
+      "articleOriginSelector": "div.article_info div.sponsor a.btn_artialoriginal[href]",
+      "articleAttr": "href",
+      "removeSelector": "div#articleBody div#articleBodyContents a"
+    },
+    "commentSelectors": {
+      "openCommentPatternRegex": "news.naver.com.*oid=(\\d.*)\\&aid=(\\d.*)",
+      "openCommentPattern": "http://news.naver.com/main/read.nhn?mode=LS2D&mid=shm&sid1=100&sid2=265&oid=018&aid=0004028184",
+      "urlPattern": "https://apis.naver.com/commentBox/cbox5/web_naver_list_jsonp.json?ticket=news&templateId=default_life&_callback=window.__cbox_jindo_callback._2152&lang=ko&country=KR&objectId=news#1#,#2#&categoryId&pageSize=10000&indexSize=10&groupId&page=1&initialize=true&useAltSort=true&replyPageSize=100&moveTo&sort&userType="
+    }
+  },
+  {
+    "site": "네이버 뉴스",
+    "urlPattern": [
+      "sports.news.naver.com"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "dateFormat": "YYYYMMDD",
+      "startDtParam": "date",
+      "listSelector": "div#main_content div.list_body.newsflash_body ul li",
+      "linkSelector": "dl > dt > a[href]",
+      "linkAttr": "href",
+      "datetimeSelector": "dl > dd > span.date",
+      "paginationSelector": "div.paging",
+      "paginationTag": "strong",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+      "documentSelector": "div#container",
+      "documentNoResultSelector": "div.error_msg",
+      "titleSelector": "div.news_headline h4.title",
+      "contentSelector": "div#newsEndContents",
+      "datetimeSelector": "div.news_headline div.info",
+      "commentCountSelector" : "div.u_cbox_head span.u_cbox_count",
+      "likeCountSelector": "div.news_end_btn div.u_likeit li.good span._count",
+      "warmCountSelector":"div.end_btn li.u_likeit_list.warm span.u_likeit_list_count._count",
+      "sadCountSelector":"div.end_btn li.u_likeit_list.sad span.u_likeit_list_count._count",
+      "angryCountSelector":"div.end_btn li.u_likeit_list.angry span.u_likeit_list_count._count",
+      "wantCountSelector":"div.end_btn li.u_likeit_list.want span.u_likeit_list_count._count",
+      "recommendCountSelector":"div#toMainContainer em.u_cnt._count",
+      "mediaSelector": "div.news_headline span#pressLogo a > img",
+      "mediaAttr": "alt",
+      "articleOriginSelector": "div.news_headline div.info a[href]",
+      "articleAttr": "href",
+      "removeSelector": "div#newsEndContents a"
+    },
+    "commentSelectors": {
+      "openCommentPatternRegex": "news.naver.com.*oid=(\\d.*)\\&aid=(\\d.*)",
+      "openCommentPattern": "http://news.naver.com/main/read.nhn?mode=LS2D&mid=shm&sid1=100&sid2=265&oid=018&aid=0004028184",
+      "urlPattern": "https://apis.naver.com/commentBox/cbox5/web_naver_list_jsonp.json?ticket=news&templateId=default_life&_callback=window.__cbox_jindo_callback._2152&lang=ko&country=KR&objectId=news#1#,#2#&categoryId&pageSize=10000&indexSize=10&groupId&page=1&initialize=true&useAltSort=true&replyPageSize=100&moveTo&sort&userType="
+    }
+  },
+  {
+    "site": "네이버 뉴스",
+    "urlPattern": [
+      "entertain.naver.com"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "dateFormat": "YYYYMMDD",
+      "startDtParam": "date",
+      "listSelector": "div#main_content div.list_body.newsflash_body ul li",
+      "linkSelector": "dl > dt > a[href]",
+      "linkAttr": "href",
+      "datetimeSelector": "dl > dd > span.date",
+      "paginationSelector": "div.paging",
+      "paginationTag": "strong",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+      "documentSelector": "div#content div.end_ct_area",
+      "documentNoResultSelector": "div.error_msg",
+      "titleSelector": "h2.end_tit",
+      "contentSelector": "div.end_body_wrp div#articeBody",
+      "datetimeSelector": "div.article_info span.author:nth-child(1) > em",
+      "commentCountSelector" : "div.u_cbox_head span.u_cbox_count",
+      "likeCountSelector": "div.end_btn div.u_likeit li.good span._count",
+      "warmCountSelector":"div.end_btn li.u_likeit_list.warm span.u_likeit_list_count._count",
+      "sadCountSelector":"div.end_btn li.u_likeit_list.sad span.u_likeit_list_count._count",
+      "angryCountSelector":"div.end_btn li.u_likeit_list.angry span.u_likeit_list_count._count",
+      "wantCountSelector":"div.end_btn li.u_likeit_list.want span.u_likeit_list_count._count",
+      "recommendCountSelector":"div#toMainContainer em.u_cnt._count",
+      "mediaSelector": "div.press_logo a > img",
+      "mediaAttr": "alt",
+      "articleOriginSelector": "div.article_info a[href]",
+      "articleAttr": "href",
+      "removeSelector": "div.end_body_wrp div#articeBody a"
+    },
+    "commentSelectors": {
+      "openCommentPatternRegex": "news.naver.com.*oid=(\\d.*)\\&aid=(\\d.*)",
+      "openCommentPattern": "http://news.naver.com/main/read.nhn?mode=LS2D&mid=shm&sid1=100&sid2=265&oid=018&aid=0004028184",
+      "urlPattern": "https://apis.naver.com/commentBox/cbox5/web_naver_list_jsonp.json?ticket=news&templateId=default_life&_callback=window.__cbox_jindo_callback._2152&lang=ko&country=KR&objectId=news#1#,#2#&categoryId&pageSize=10000&indexSize=10&groupId&page=1&initialize=true&useAltSort=true&replyPageSize=100&moveTo&sort&userType="
+    }
+  },
+  {
+    "site": "네이버 뉴스",
+    "urlPattern": [
+      "search.naver.com"
+    ],
+    "linkSelectors": {
+      "crawlerInterval": 3000,
+      "startDtParam": "date",
+      "listSelector": "ul.list_news > li",
+      "linkSelector": "div.info_group a.info:last-child[href]",
+      "linkAttr": "href",
+      "datetimeSelector": "div.info_group",
+      "datetimeRegex": "\\S.*\\s\\s(\\d.*)네이버뉴스",
+      "datetimePattern": "#1#",
+      "existSelector": "div.info_group a.info:last-child[href]",
+      "maxPagingCount": 400,
+      "pagingInterval": 3000
+    },
+    "docSelectors": {
+      "crawlerInterval": 3000,
+        "documentSelector": "#ct",
+        "documentNoResultSelector": "div.error_msg",
+        "titleSelector": ".media_end_head_title h2.media_end_head_headline",
+        "contentSelector": "div#newsct_article",
+        "naverDatetimeSelector": "div.media_end_head_info_datestamp > div > span",
+        "naverDatetimeRegex":
+          "(\\d{1,4}).(\\d{1,2}).(\\d{1,2}).(\\s)(오전|오후)(\\s)(\\d{1,2})(?:\\:)(\\d{1,2})(?:\\:)?(\\d{1,2})?",
+        "usefulCountSelector":
+          "#likeItCountViewDiv > ul > li.u_likeit_list.useful > a > span.u_likeit_list_count._count",
+        "wowCountSelector":
+          "#likeItCountViewDiv > ul > li.u_likeit_list.wow > a > span.u_likeit_list_count._count",
+        "touchedCountSelector":
+          "#likeItCountViewDiv > ul > li.u_likeit_list.touched > a > span.u_likeit_list_count._count",
+        "analyticalCountSelector":
+          "#likeItCountViewDiv > ul > li.u_likeit_list.analytical > a > span.u_likeit_list_count._count",
+        "moreCountSelector":
+          "#likeItCountViewDiv > ul > li.u_likeit_list.recommend > a > span.u_likeit_list_count._count",
+        "recommendCountSelector": "div#toMainContainer em.u_cnt._count",
+        "mediaSelector": "a.media_end_head_top_logo > img",
+        "mediaAttr": "title",
+        "articleOriginSelector":
+          "#ct > div.media_end_head.go_trans > div.media_end_head_info.nv_notrans > div.media_end_head_info_datestamp > a",
+        "articleAttr": "href"
+    },
+    "commentSelectors": {
+      "urlPattern": "https://apis.naver.com/commentBox/cbox/web_naver_list_jsonp.json"
+    }
+  }
+]

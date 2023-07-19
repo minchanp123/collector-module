@@ -1,0 +1,50 @@
+{
+  "name": "collector-worker-sqs",
+  "version": "1.0.0",
+  "description": "collector-worker-sqs",
+  "main": "app.js",
+  "scripts": {
+    "worker": "forever start app.js && tail -f /home/ubuntu/.forever/$(forever list | grep app.js | cut -c24-27).log",
+    "forever-tail": "tail -f /home/ubuntu/.forever/$(forever list | grep app.js | cut -c24-27).log"
+  },
+  "dependencies": {
+    "@azure/identity": "^1.1.0",
+    "@azure/service-bus": "^7.0.3",
+    "@azure/storage-blob": "^12.14.0",
+    "@azure/storage-queue": "^12.13.0",
+    "async": "^2.6.3",
+    "aws-sdk": "^2.637.0",
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
+    "cheerio-httpcli": "^0.8.3",
+    "chrome-remote-interface": "^0.25.7",
+    "crypto-browserify": "^3.12.0",
+    "dateformat": "^3.0.3",
+    "excel-parser": "^0.2.2",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^8.1.0",
+    "ip": "^1.1.5",
+    "md5": "^2.3.0",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.29.3",
+    "morgan": "^1.9.1",
+    "mysql": "^2.18.1",
+    "needle": "^1.6.0",
+    "puppeteer": "^10.4.0",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-adblocker": "^2.12.0",
+    "puppeteer-extra-plugin-stealth": "^2.9.0",
+    "request": "^2.88.2",
+    "request-progress": "^3.0.0",
+    "shelljs": "^0.8.5",
+    "sleep": "^6.3.0",
+    "string-to-arraybuffer": "^1.0.2",
+    "utf8": "^3.0.0",
+    "winston": "^2.4.4",
+    "winston-daily-rotate-file": "^1.7.2"
+  },
+  "engines": {
+    "node": "= 16.13.0"
+  }
+}
